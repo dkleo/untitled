@@ -13,7 +13,7 @@ library(readxl)     # Reads CSV and Excel files
 # LOAD DATA ################################################
 
 # Also convert several adjacent variables to factors
-df <- read_csv("C:/Users/lords/R/Ex_Files_Learning_R/Exercise Files/data/state_trends.csv") |>
+df <- read_csv("C:/Users/lords/R/lynda/data/state_trends.csv") |> # nolint: line_length_linter.
   mutate(across(c(region:psy_reg), factor)) |>
   print()
 
@@ -31,9 +31,9 @@ df |>
   plot()
 
 # Similar code using barplot(); DOESN'T WORK
-df |>
-  select(psy_reg) |>
-  barplot()  # Error: height must be a vector or a matrix
+# df |>
+  # select(psy_reg) |>
+  # barplot()  # Error: height must be a vector or a matrix
 
 # Create frequency vector with table()
 df |>

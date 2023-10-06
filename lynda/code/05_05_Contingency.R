@@ -13,7 +13,7 @@ library(readxl)     # Reads CSV and Excel files
 # LOAD DATA ################################################
 
 # Also convert all variables to factors
-df <- read_csv("data/state_trends.csv") |>
+df <- read_csv(Sys.getenv("Rdata"), "state_trends.csv") |>
   select(region, psy_reg) |> 
   mutate(across(everything(), as_factor)) |>
   print()

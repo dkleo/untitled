@@ -13,7 +13,7 @@ library(readxl)     # Reads CSV and Excel files
 # LOAD DATA ################################################
 
 # Select the personality and Google Trends variables
-df <- read_csv("data/state_trends.csv") |>
+df <- read_csv("C:/Users/lords/R/lynda/data/state_trends.csv") |>
   select(extraversion:hockey) |>
   print()
 
